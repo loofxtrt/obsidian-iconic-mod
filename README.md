@@ -18,6 +18,12 @@ mudanças relevantes
 
 ---
 
+criação de releases
+- npm i
+- npm run build
+- copiar main.js, manifest.json, styles.css pra um dir
+- upar o dir como release
+
 # Iconic
 
 A plugin for iconophiles, designed to blend seamlessly with vanilla Obsidian.

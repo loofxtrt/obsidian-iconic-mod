@@ -1,6 +1,6 @@
 {
-	"id": "iconic",
-	"name": "Iconic",
+	"id": "iconic-mod",
+	"name": "Iconic Mod",
 	"version": "1.1.4",
 	"minAppVersion": "1.6.0",
 	"description": "Customize your icons and their colors directly from the UI, including tabs, files & folders, bookmarks, tags, properties, and ribbon commands.",

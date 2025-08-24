@@ -1,5 +1,5 @@
 {
-	"name": "iconic",
+	"name": "iconic-mod",
 	"version": "1.1.4",
 	"description": "Customize your icons and their colors directly from the UI, including tabs, files & folders, bookmarks, tags, properties, and ribbon commands.",
 	"main": "main.js",

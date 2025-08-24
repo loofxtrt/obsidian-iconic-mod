@@ -18,6 +18,12 @@ mudanças relevantes
 
 ---
 
+mudança de nome
+- .github/workflows/release.yaml
+- package.json, package-lock.json, manifest.json
+
+---
+
 criação de releases
 - npm i
 - npm run build

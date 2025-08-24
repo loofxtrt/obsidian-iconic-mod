@@ -1,3 +1,23 @@
+mudanças relevantes
+- subdirs: lógica pra mostrar um ícone diferente caso um diretório da file tree tenha subdiretórios
+- dirs: mudar o ícone de show all folders padrão (lucide-folder-closed)
+
+---
+
+- iconicplugin.ts
+    linhas:  
+    - ~904 (subdirs)
+    - ~1017 (dirs)
+    - ~1009 (dirs)
+- fileiconmanager.ts
+    linhas:
+    - 147~159 (subdirs)
+- bookmarkiconmanager.ts
+    linhas:
+    - ~123 (dirs)
+
+---
+
 # Iconic
 
 A plugin for iconophiles, designed to blend seamlessly with vanilla Obsidian.

@@ -900,7 +900,21 @@ export default class IconicPlugin extends Plugin {
 				iconDefault = 'lucide-file';
 			}
 		} else if (tFile instanceof TFolder && (fileIcon.color && !this.settings.minimalFolderIcons || this.settings.showAllFolderIcons)) {
-			iconDefault = 'lucide-folder-closed';
+			// mostrar os ícones de pastas em todos os diretórios
+			
+			iconDefault = 'lucide-folder'; // originalmente lucide-folder-closed
+			/*
+			COMENTADO POR APARENTEMENTE NÃO FAZER DIFERENÇA
+
+			// checagem caso o diretório tenha subdiretórios dentro dele
+			const hasSubfolders = tFile.children.some(child => child instanceof TFolder);
+
+			if (hasSubfolders) {
+				iconDefault = 'lucide-folders';
+			} else {
+				iconDefault = 'lucide-folder'; // originalmente lucide-folder-closed
+			}
+			*/
 		}
 
 		return {
@@ -1005,7 +1019,7 @@ export default class IconicPlugin extends Plugin {
 				id = path;
 				name = basename;
 				bmarkIcon = this.settings.fileIcons[id] ?? {};
-				iconDefault = 'lucide-folder';
+				iconDefault = 'lucide-folder'; // originalmente lucide-folder-closed
 				break;
 			}
 			case 'group': {
@@ -1013,7 +1027,7 @@ export default class IconicPlugin extends Plugin {
 				name = bmarkBase.title;
 				bmarkIcon = this.settings.bookmarkIcons[id] ?? {};
 				if (bmarkIcon.color && !this.settings.minimalFolderIcons || this.settings.showAllFolderIcons) {
-					iconDefault = 'lucide-folder-closed';
+					iconDefault = 'lucide-folder'; // originalmente lucide-folder-closed
 				}
 				break;
 			}

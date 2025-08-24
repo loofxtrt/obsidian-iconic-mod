@@ -146,9 +146,20 @@ export default class FileIconManager extends IconManager {
 
 			if (file.items) {
 				// Toggle default icon based on expand/collapse state
-				if (file.iconDefault) file.iconDefault = iconEl.hasClass('is-collapsed')
-					? 'lucide-folder-closed'
-					: 'lucide-folder-open';
+
+				// verificação se o diretório tem subdiretórios
+				const hasSubfolders = file.items.some(child => child.category === 'folder');
+				
+				if (hasSubfolders) {
+					// se está colapsado, mostra o ícone de "pastas", senão mostra "open"
+					file.iconDefault = iconEl.hasClass('is-collapsed')
+						? 'lucide-folders' // ícone de múltiplas pastas 
+						: 'lucide-folder-open';
+				} else {
+					file.iconDefault = iconEl.hasClass('is-collapsed')
+						? 'lucide-folder' // originalmente lucide-folder-closed
+						: 'lucide-folder-open';
+				}
 			}
 
 			let folderIconEl = selfEl.find(':scope > .iconic-sidekick:not(.tree-item-icon)');

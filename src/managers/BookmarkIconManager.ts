@@ -120,7 +120,7 @@ export default class BookmarkIconManager extends IconManager {
 			if (bmark.items) {
 				// Toggle default icon based on expand/collapse state
 				if (bmark.iconDefault) bmark.iconDefault = iconEl.hasClass('is-collapsed')
-					? 'lucide-folder-closed'
+					? 'lucide-folder' // originalmente lucide-folder-closed
 					: 'lucide-folder-open';
 				let folderIconEl = selfEl.find(':scope > .iconic-sidekick:not(.tree-item-icon)');
 				if (this.plugin.settings.minimalFolderIcons || !this.plugin.settings.showAllFolderIcons && !rule.icon && !rule.iconDefault) {
